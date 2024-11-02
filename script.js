@@ -75,7 +75,7 @@ equalsBtn.addEventListener("click",() =>{
             result = multiply(parseFloat(operand1), parseFloat(operand2))
             break;
         case "Divide":
-            result = divide(parseFloat(operand1), parseFloat(operand2))
+            result = divide(parseFloat(operand1), parseFloat(operand2)).toFixed(2)
             break;
     }
 
@@ -116,5 +116,5 @@ function multiply(num1, num2){
 }
 
 function divide(num1, num2){
-    return num1 / num2
+    return num2 !== 0 ? num1 / num2 : "Error";  // Avoid division by zero
 }
